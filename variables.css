@@ -1,0 +1,36 @@
+/* переменная задается обычно через глобальный псевдокласс:  */
+:root {
+    --main-color: #fada;
+    --font-size: 50px;
+}
+
+.title {
+    /* таким образом можно обращаться к переменным, и тем самым их применять. Если поменять цвет в root, 
+    то так же поменяется цвет во всех местах, где используются переменные. Удобно.  */
+    color: var(--main-color);
+    font-size: var(--font-size);
+}
+
+.text {
+    /* Можно задавать ограниченные переменные, которые взаимодейсбвут только с элементом, внутри которого он задан: */
+    --text-color: red;
+    --text-size: 30px;
+    color: var(--text-color);
+    font-size: var(--text-size);
+}
+
+.container {
+    /* position: relative;    
+    left: 200px;
+    top: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    max-width: 1000px; */
+
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+
+
